@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #0070f3;
+}
+
+header p {
+  color: #888;
+  margin-top: 8px;
+}
+
+/* Filtros */
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.filtro {
+  padding: 8px 20px;
+  border: 2px solid #0070f3;
+  background: transparent;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filtro:hover,
+.filtro.activo {
+  background: #0070f3;
+}
+
+/* Grid proyectos */
+.proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Tarjeta */
+.tarjeta {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #222;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  border-color: #0070f3;
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.tarjeta h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.tarjeta p {
+  color: #888;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.tag {
+  display: inline-block;
+  background: #0070f320;
+  color: #0070f3;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  margin-right: 6px;
+}
+
+.enlaces {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+}
+
+.enlaces a {
+  text-decoration: none;
+  color: #0070f3;
+  font-size: 0.85rem;
+  border: 1px solid #0070f3;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.enlaces a:hover {
+  background: #0070f3;
+  color: #fff;
+}
+
+/* Sección aprender */
+.aprender-seccion {
+  text-align: center;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px 20px;
+  background: #1a1a1a;
+  border-radius: 12px;
+  border: 1px solid #222;
+}
+
+.aprender-seccion h2 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.aprender-seccion > p {
+  color: #aaa;
+  margin-bottom: 24px;
+}
+
+/* Pestañas */
+.pestanas {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.pestana {
+  padding: 10px 28px;
+  border-radius: 20px;
+  border: 2px solid #0070f3;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.pestana:hover,
+.pestana.activa {
+  background: #0070f3;
+}
+
+/* Contenido tabs */
+.tab-contenido {
+  text-align: left;
+}
+
+.tab-contenido h3 {
+  font-size: 1.4rem;
+  color: #0070f3;
+  margin-bottom: 10px;
+}
+
+.tab-contenido > p {
+  color: #aaa;
+  margin-bottom: 24px;
+}
+
+.oculto {
+  display: none;
+}
+
+/* Pasos */
+.pasos {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.paso {
+  background: #111;
+  border-radius: 10px;
+  padding: 16px;
+  width: 180px;
+  text-align: center;
+  border: 1px solid #333;
+}
+
+.paso span {
+  display: inline-block;
+  background: #0070f3;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  line-height: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.paso-python span {
+  background: #f7c948;
+  color: #000;
+}
+
+.paso p {
+  color: #aaa;
+  font-size: 0.85rem;
+}
+
+/* Código */
+.codigo-ejemplo {
+  background: #111;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #333;
+}
+
+.codigo-python {
+  border-color: #f7c94840;
+}
+
+.codigo-titulo {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.codigo-ejemplo pre {
+  background: #0d0d0d;
+  border-radius: 8px;
+  padding: 16px;
+  overflow-x: auto;
+}
+
+.codigo-ejemplo code {
+  color: #0070f3;
+  font-size: 0.9rem;
+  font-family: 'Courier New', monospace;
+}
+
+.codigo-python code {
+  color: #f7c948;
+}
+
+/* Tags */
+.proyectos-tags {
+  background: #111;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 24px;
+  border: 1px solid #333;
+}
+
+.tags-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.tag-js {
+  background: #0070f320;
+  color: #0070f3;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.tag-py {
+  background: #f7c94820;
+  color: #f7c948;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.ayuda-texto {
+  color: #888;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Botón Claude */
+.btn-claude {
+  display: inline-block;
+  background: #0070f3;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-claude:hover {
+  background: #005bb5;
+  transform: translateY(-2px);
+}
+
+.btn-claude-python {
+  background: #f7c948;
+  color: #000;
+}
+
+.btn-claude-python:hover {
+  background: #e0b030;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  color: #888;
+  font-size: 0.85rem;
+  border-top: 1px solid #222;
+}
+
+footer a {
+  color: #0070f3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #fff;
+}/* Conceptos grid */
+.conceptos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.concepto-card {
+  background: #111;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #333;
+  transition: border-color 0.3s;
+}
+
+.concepto-card:hover {
+  border-color: #0070f3;
+}
+
+.concepto-icono {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.concepto-card h4 {
+  font-size: 1.1rem;
+  color: #0070f3;
+  margin-bottom: 6px;
+}
+
+.concepto-card p {
+  color: #aaa;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+.concepto-card pre {
+  background: #0d0d0d;
+  border-radius: 8px;
+  padding: 12px;
+  overflow-x: auto;
+}
+
+.concepto-card code {
+  color: #7ee787;
+  font-size: 0.8rem;
+  font-family: 'Courier New', monospace;
+}

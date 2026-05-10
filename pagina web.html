@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Mi Portafolio</h1>
+    <p>Proyectos de programación</p>
+  </header>
+
+  <!-- Filtros -->
+  <section class="filtros">
+    <button class="filtro activo" data-filtro="todos">Todos</button>
+    <button class="filtro" data-filtro="javascript">JavaScript</button>
+    <button class="filtro" data-filtro="python">Python</button>
+    <button class="filtro" data-filtro="web">Web</button>
+  </section>
+
+  <!-- Proyectos -->
+  <section class="proyectos" id="proyectos"></section>
+
+  <!-- Sección Aprende -->
+  <section class="aprender-seccion">
+    <h2>Aprende a Programar 📚</h2>
+    <p>Elige un lenguaje y empieza hoy</p>
+
+    <!-- Pestañas -->
+   <div class="pestanas">
+  <button class="pestana activa" data-tab="javascript">JavaScript</button>
+  <button class="pestana" data-tab="python">Python</button>
+  <button class="pestana" data-tab="conceptos">¿Qué es programar?</button>
+</div>
+
+    <!-- Contenido JavaScript -->
+    <div class="tab-contenido" id="javascript">
+      <h3>¿Qué es JavaScript? 🌐</h3>
+      <p>JavaScript es el lenguaje del navegador. Con él puedes crear páginas web, bots, apps y mucho más.</p>
+
+      <div class="pasos">
+        <div class="paso">
+          <span>1</span>
+          <p>Instala <strong>VS Code</strong></p>
+        </div>
+        <div class="paso">
+          <span>2</span>
+          <p>Instala <strong>Node.js</strong></p>
+        </div>
+        <div class="paso">
+          <span>3</span>
+          <p>Crea tus archivos <strong>HTML, CSS y JS</strong></p>
+        </div>
+      </div>
+
+      <div class="codigo-ejemplo">
+        <p class="codigo-titulo">👨‍💻 Tu primer código</p>
+        <pre><code>// Variables
+const nombre = "Juan"
+const edad = 20
+
+// Condición
+if (edad >= 18) {
+  console.log("Eres mayor de edad")
+}
+
+// Función
+function saludar(nombre) {
+  return `Hola, ${nombre}!`
+}
+
+console.log(saludar(nombre))</code></pre>
+      </div>
+
+      <div class="proyectos-tags">
+        <p class="codigo-titulo">🚀 ¿Qué puedes hacer?</p>
+        <div class="tags-lista">
+          <span class="tag-js">🌐 Páginas web</span>
+          <span class="tag-js">🤖 Bots</span>
+          <span class="tag-js">📱 Apps</span>
+          <span class="tag-js">🎮 Videojuegos</span>
+          <span class="tag-js">⚙️ Automatización</span>
+        </div>
+      </div>
+
+      <p class="ayuda-texto">¿Tienes dudas con JavaScript? Claude puede ayudarte 👇</p>
+      <a href="https://claude.ai" target="_blank" class="btn-claude">Ir a Claude.ai ✨</a>
+    </div>
+
+    <!-- Contenido Python -->
+    <div class="tab-contenido oculto" id="python">
+      <h3>¿Qué es Python? 🐍</h3>
+      <p>Python es uno de los lenguajes más populares del mundo. Fácil de aprender y muy poderoso.</p>
+
+      <div class="pasos">
+        <div class="paso paso-python">
+          <span>1</span>
+          <p>Descarga <strong>Python</strong> desde python.org</p>
+        </div>
+        <div class="paso paso-python">
+          <span>2</span>
+          <p>Instala la extensión de <strong>Python en VS Code</strong></p>
+        </div>
+        <div class="paso paso-python">
+          <span>3</span>
+          <p>Instala librerías con <strong>pip install</strong></p>
+        </div>
+      </div>
+
+      <div class="codigo-ejemplo codigo-python">
+        <p class="codigo-titulo">👨‍💻 Tu primer código</p>
+        <pre><code># Variables
+nombre = "Juan"
+edad = 20
+
+# Condición
+if edad >= 18:
+    print("Eres mayor de edad")
+
+# Bucle
+for i in range(5):
+    print(f"Número: {i}")
+
+# Función
+def saludar(nombre):
+    return f"Hola, {nombre}!"
+
+print(saludar(nombre))</code></pre>
+      </div>
+
+      <div class="proyectos-tags">
+        <p class="codigo-titulo">🚀 ¿Qué puedes hacer?</p>
+        <div class="tags-lista">
+          <span class="tag-py">🤖 Bots</span>
+          <span class="tag-py">📊 Análisis de datos</span>
+          <span class="tag-py">🌐 Web scraping</span>
+          <span class="tag-py">🧠 Inteligencia artificial</span>
+          <span class="tag-py">⚙️ Automatización</span>
+        </div>
+      </div>
+
+      <p class="ayuda-texto">¿Tienes dudas con Python? Claude puede ayudarte 👇</p>
+      <a href="https://claude.ai" target="_blank" class="btn-claude btn-claude-python">Ir a Claude.ai ✨</a>
+    </div>
+
+  <!-- Contenido Conceptos -->
+<div class="tab-contenido oculto" id="conceptos">
+  <h3>¿Qué es la programación? 💻</h3>
+  <p>Programar es darle instrucciones a una computadora para que haga algo. Como una receta de cocina — tú escribes los pasos y la computadora los sigue exactamente.</p>
+
+  <!-- Conceptos básicos -->
+  <div class="conceptos-grid">
+
+    <div class="concepto-card">
+      <span class="concepto-icono">📦</span>
+      <h4>Variables</h4>
+      <p>Guardan información para usarla después.</p>
+      <pre><code>// JavaScript
+let nombre = "Juan"
+let edad = 20
+
+# Python
+nombre = "Juan"
+edad = 20</code></pre>
+    </div>
+
+    <div class="concepto-card">
+      <span class="concepto-icono">🔀</span>
+      <h4>Condicionales</h4>
+      <p>Toman decisiones según una condición.</p>
+      <pre><code>// JavaScript
+if (edad >= 18) {
+  console.log("Mayor de edad")
+}
+
+# Python
+if edad >= 18:
+    print("Mayor de edad")</code></pre>
+    </div>
+
+    <div class="concepto-card">
+      <span class="concepto-icono">🔁</span>
+      <h4>Bucles</h4>
+      <p>Repiten una acción varias veces.</p>
+      <pre><code>// JavaScript
+for (let i = 0; i < 5; i++) {
+  console.log(i)
+}
+
+# Python
+for i in range(5):
+    print(i)</code></pre>
+    </div>
+
+    <div class="concepto-card">
+      <span class="concepto-icono">⚙️</span>
+      <h4>Funciones</h4>
+      <p>Bloques de código reutilizables.</p>
+      <pre><code>// JavaScript
+function saludar(nombre) {
+  return `Hola, ${nombre}!`
+}
+
+# Python
+def saludar(nombre):
+    return f"Hola, {nombre}!"</code></pre>
+    </div>
+
+    <div class="concepto-card">
+      <span class="concepto-icono">📋</span>
+      <h4>Listas</h4>
+      <p>Guardan varios valores en una sola variable.</p>
+      <pre><code>// JavaScript
+let frutas = ["manzana", "pera"]
+
+# Python
+frutas = ["manzana", "pera"]</code></pre>
+    </div>
+
+    <div class="concepto-card">
+      <span class="concepto-icono">🗂️</span>
+      <h4>Objetos</h4>
+      <p>Guardan datos con nombre y valor.</p>
+      <pre><code>// JavaScript
+let persona = {
+  nombre: "Juan",
+  edad: 20
+}
+
+# Python
+persona = {
+  "nombre": "Juan",
+  "edad": 20
+}</code></pre>
+    </div>
+
+  </div>
+
+  <p class="ayuda-texto">¿Tienes dudas sobre estos conceptos? Claude puede ayudarte 👇</p>
+  <a href="https://claude.ai" target="_blank" class="btn-claude">Ir a Claude.ai ✨</a>
+</div></section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Powered by <a href="https://claude.ai" target="_blank">Claude</a> ✨</p>
+  </footer>
+
+<script src="index.js"></script>
+</body>
+</html>
